@@ -622,6 +622,11 @@
     display: flex; flex-direction: column; gap: 22px;
   }
 
+  .dossier-main,
+  .dossier-side {
+    min-width: 0;
+  }
+
   .dossier-stamp {
     border: 2px solid var(--accent-d); color: var(--accent-d);
     padding: 8px 12px; text-align: center;
@@ -1147,9 +1152,7 @@
               <span class="cv-entry-title"><span class="en">Mapping Cross-National Belief Networks (M.A. Thesis)</span><span class="zh">跨国信念网络图谱（硕士论文）</span></span>
               <span class="cv-entry-date">Nov 2025 — April 2026</span>
             </div>
-            <div class="cv-entry-desc"><span class="en">Graph-based representations of cultural belief systems from 100k+ survey responses. Engineered network features (centrality, community detection); trained classification models for cluster prediction.</span><span class="zh">基于 10 万余条调查样本构建文化信念体系的图结构表示；提取网络特征（中心性、社区检测），训练分类模型预测文化聚类。</span></div>
-              <a href="https://drive.google.com/file/d/1K_kL05K2-JoKZliQPo8YZKY-5iXAHZfN/view?usp=sharing" target="_blank" style="color:var(--accent-d);font-family:var(--mono);font-size:0.78rem;letter-spacing:0.08em;text-decoration:underline;">
-              <span class="en">Read the write-up →</span><span class="zh">阅读完整论文 →</span></a></div>
+            <div class="cv-entry-desc"><span class="en">Graph-based representations of cultural belief systems from 100k+ survey responses. Engineered network features (centrality, community detection); trained classification models for cluster prediction.</span><span class="zh">基于 10 万余条调查样本构建文化信念体系的图结构表示；提取网络特征（中心性、社区检测），训练分类模型预测文化聚类。</span></div><a href="https://drive.google.com/file/d/1K_kL05K2-JoKZliQPo8YZKY-5iXAHZfN/view?usp=sharing" target="_blank" style="color:var(--accent-d);font-family:var(--mono);font-size:0.78rem;letter-spacing:0.08em;text-decoration:underline;"><span class="en">Read →</span><span class="zh">阅读完整论文 →</span></a>
           </div>
           <div class="cv-entry">
             <div class="cv-entry-head">
@@ -1175,12 +1178,10 @@
           </div>
           <div class="cv-entry">
             <div class="cv-entry-head">
-              <span class="cv-entry-title"><span class="en">Science &amp; Technology Attitudes — Multilevel Modeling</span><span class="zh">科学与技术态度 — 多层次建模</span></span>
+              <span class="cv-entry-title"><span class="en">Science &amp; Technology Attitudes - Multilevel Modeling</span><span class="zh">科学与技术态度 — 多层次建模</span></span>
               <span class="cv-entry-date">Jan — March 2026</span>
             </div>
-            <div class="cv-entry-desc"><span class="en">Multi-level survey data (individual + country) with regression to study predictors of science attitudes; results presented for non-technical audiences.</span><span class="zh">基于个人与国家层级数据的多层次回归，研究科学态度的预测因子；面向非技术读者呈现结果。</span> 
-              <a href="https://drive.google.com/file/d/1AA8vf4ZGOavhFyUunUWyahhA0fOBjXE9/view?usp=sharing" target="_blank" style="color:var(--accent-d);font-family:var(--mono);font-size:0.78rem;letter-spacing:0.08em;text-decoration:underline;">
-              <span class="en">Read the write-up →</span><span class="zh">阅读完整论文 →</span></a></div>
+            <div class="cv-entry-desc"><span class="en">Multi-level survey data (individual + country) with regression to study predictors of science attitudes; results presented for non-technical audiences.</span><span class="zh">基于个人与国家层级数据的多层次回归，研究科学态度的预测因子；面向非技术读者呈现结果。</span> <a href="https://drive.google.com/file/d/1AA8vf4ZGOavhFyUunUWyahhA0fOBjXE9/view?usp=sharing" target="_blank" style="color:var(--accent-d);font-family:var(--mono);font-size:0.78rem;letter-spacing:0.08em;text-decoration:underline;"><span class="en">Read →</span><span class="zh">阅读完整论文 →</span></a></div>
           </div>
         </div>
 
@@ -1357,7 +1358,7 @@ WIRE</span><span class="zh">№ 04 · 电报</span></span>
   }/*EDITMODE-END*/;
 
   function applyPalette(name) {
-    document.body.classList.remove('palette-budapest','palette-moonrise','palette-tenenbaums','palette-isle','palette-asteroid','palette-aquatic','palette-dispatch');
+    document.body.classList.remove('palette-budapest');
     document.body.classList.add('palette-' + name);
   }
   function applyGrain(on) {
@@ -1382,12 +1383,6 @@ WIRE</span><span class="zh">№ 04 · 电报</span></span>
             value={tweaks.palette}
             options={[
               { value: 'budapest', label: 'Budapest' },
-              { value: 'moonrise', label: 'Moonrise' },
-              { value: 'tenenbaums', label: 'Tenenbaums' },
-              { value: 'isle', label: 'Isle of Dogs' },
-              { value: 'asteroid', label: 'Asteroid City' },
-              { value: 'aquatic', label: 'Life Aquatic' },
-              { value: 'dispatch', label: 'French Dispatch' },
             ]}
             onChange={(v) => setTweak('palette', v)}
           />
